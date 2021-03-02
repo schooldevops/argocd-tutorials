@@ -68,16 +68,16 @@ https://localhost:31602/
 
 우선 argocd 레 우리가 작성한 디플로이먼트 를 수행하기 위해서는 다음과 같은 리포지토리 등록 절차가 필요하다.
 
-![argocd_deploy_01](deploy/argocd_deploy_01.png)
+![argocd_deploy_01](imgs/argocd_deploy_01.png)
 
 - Manage your repositories, projects, settings 탭을 선택하다.
 - Repositories 부분을 클릭해준다. 
 
-![argocd_deploy_02](deploy/argocd_deploy_02.png)
+![argocd_deploy_02](imgs/argocd_deploy_02.png)
 
 - 위 화면에서 CONNECT REPO USING HTTPS 를 선택하자. 
   
-![argocd_deploy_03](deploy/argocd_deploy_03.png)
+![argocd_deploy_03](imgs/argocd_deploy_03.png)
 
 - Type: git
 - Repository URL: 배포 매니페스트가 존재하는 리포지토리를 추가한다.
@@ -89,7 +89,7 @@ https://localhost:31602/
 
 생성하기를 완료하면 리포지토리 목록을 확인할 수 있게 된다. 
 
-![argocd_deploy_04](deploy/argocd_deploy_04.png)
+![argocd_deploy_04](imgs/argocd_deploy_04.png)
 
 ### Application 생성하기. 
 
@@ -97,11 +97,11 @@ https://localhost:31602/
 
 왼쪽 탭 맨 상단의 탭을 클릭한다. 
 
-![argocd_deploy_05](deploy/argocd_deploy_05.png)
+![argocd_deploy_05](imgs/argocd_deploy_05.png)
 
 CREATE APPLICATION 을 선택하자. 
 
-![argocd_deploy_06](deploy/argocd_deploy_06.png)
+![argocd_deploy_06](imgs/argocd_deploy_06.png)
 
 - Application Name: greet 로 지정했다. 
 - Project: default 로 그대로 두자. 
@@ -115,7 +115,7 @@ CREATE APPLICATION 을 선택하자.
 - Path: 매니페스트 위치가 deploy 이므로 우리는 deploy로 잡았다. 
 
 
-![argocd_deploy_07](deploy/argocd_deploy_07.png)
+![argocd_deploy_07](imgs/argocd_deploy_07.png)
 
 - Cluster URL: 현재 context에 있는 cluster 의 정보를 지정한다. ArgoCD가 kubernetes 에서 올라가 있으므로, 현재 kubernetes의 엔드포인트가 된다.
 - Namespace: 별도 네임스페이스를 작성하기 않았으므로, default 를 기술한다. 
@@ -124,13 +124,13 @@ CREATE APPLICATION 을 선택하자.
 
 생성하기를 클릭하면 다음과 같은 내용을 볼 수 있다. 
 
-![argocd_deploy_08](deploy/argocd_deploy_08.png)
+![argocd_deploy_08](imgs/argocd_deploy_08.png)
 
 - 현재 상태는 OutOfSync로 주황색 표시가 되어 있음을 알 수 있다. 
 
 볼드된 어플리케이션을 클릭하여 상세 내용에 들어가 보자. 
 
-![argocd_deploy_09](deploy/argocd_deploy_09.png)
+![argocd_deploy_09](imgs/argocd_deploy_09.png)
 
 위 그림과 같이 greet 어플리케이션 형상을 보여준다. 
 
@@ -143,7 +143,7 @@ CREATE APPLICATION 을 선택하자.
 
 좌측 App Details 버튼을 클릭하면 앱 상세 정보를 확인할 수 있다. 
 
-![argocd_deploy_10](deploy/argocd_deploy_10.png)
+![argocd_deploy_10](imgs/argocd_deploy_10.png)
 
 우리가 작성한 그대로의 정보를 확인할 수 있다. 
 
@@ -153,7 +153,7 @@ CREATE APPLICATION 을 선택하자.
 
 Sync 를 클릭한다. 그럼 우측에 패널이 나타나며, 몇가지 옵션들을 선택할 수 있다. 
 
-![argocd_deploy_11](deploy/argocd_deploy_11.png)
+![argocd_deploy_11](imgs/argocd_deploy_11.png)
 
 - Synchronizing ... from: 싱크될 매니페스트 위치를 알려준다. 
 - Revision: 배포할 리비젼 정보를 보여준다. 여기서는 HEAD 최신 내용임을 알 수 있다. 
@@ -167,7 +167,7 @@ SYNCHRONIZE 를 클릭하여 실제 Kubernetes 에 반영한다.
 
 이제 실제 반영된 형상을 살펴 보자. 
 
-![argocd_deploy_12](deploy/argocd_deploy_12.png)
+![argocd_deploy_12](imgs/argocd_deploy_12.png)
 
 초기 준비 단계에서 sync 된 이후의 상태를 보면 다음과 같은 내용을 확인할 수 있다. 
 

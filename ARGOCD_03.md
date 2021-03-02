@@ -57,3 +57,10 @@ spec:
 ```
 
 ## 위 작성한 코드를 모두 github으로 올린다. 
+
+## ArgoCD 접속하기. 
+
+https://localhost:31602/
+
+으로 지난번에 argocd 를 설치 했었다. 이제는 argocd 로 배포를 수행해 보자. 
+

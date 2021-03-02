@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  labels:
+    app: greet
+  name: greet 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: greet
+  template:
+    metadata:
+      labels:
+        app: greet 
+    spec:
+      containers:
+        - image:  unclebae/gogreet:v1.0
+          name:  unclebae/gogreet

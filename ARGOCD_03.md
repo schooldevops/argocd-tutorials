@@ -13,7 +13,7 @@ greetweb-deploy.yml 파일을 다음과 같이 작성한다.
 
 ```yml
 apiVersion: apps/v1
-kind: Deployment 
+kind: Deployment
 metadata:
   labels:
     app: greet
@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - image:  unclebae/gogreet:v1.0
-          name:  unclebae/gogreet
+          name:  unclebae-gogreet
 ```
 
 ## Service 작성하기 

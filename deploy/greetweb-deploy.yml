@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment 
+kind: Deployment
 metadata:
   labels:
     app: greet
@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - image:  unclebae/gogreet:v1.0
-          name:  unclebae/gogreet
+          name:  unclebae-gogreet
